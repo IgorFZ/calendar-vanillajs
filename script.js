@@ -7,7 +7,7 @@ const newEventModal = document.getElementById('newEventModal');
 const deleteEventModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
-const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satuday'];
+const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 function openModal(date) {
     clicked = date;
@@ -46,6 +46,7 @@ function load() {
         day: 'numeric'
     });
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
+    console.log(paddingDays);
 
     document.getElementById('monthDisplay').innerText = `${dt.toLocaleDateString('en-us', { month: 'long' })}, ${year}`;
 
